@@ -79,7 +79,7 @@ relationship. Relationships are processed using an object mapping as well.
  The collection of mappable keyPaths that are defined within this object mapping. These
  keyPaths refer to keys within the source object being mapped (i.e. the parsed JSON payload).
  */
-@property (nonatomic, readonly) NSArray *mappedKeyPaths;
+@property (nonatomic, readonly) NSSet *mappedKeyPaths;
 
 /**
  When YES, any attributes that have mappings defined but are not present within the source
@@ -499,13 +499,6 @@ relationship. Relationships are processed using an object mapping as well.
  */
 - (Class)classForProperty:(NSString *)propertyName;
 
-/**
- Returns an auto-released object that can be used to apply this object mapping
- given a set of mappable data. For transient objects, this generally returns an
- instance of the objectClass. For Core Data backed persistent objects, mappableData
- will be inspected to search for primary key data to lookup existing object instances.
- */
-- (id)mappableObjectForData:(id)mappableData;
 
 // Deprecations
 + (id)mappingForClass:(Class)objectClass withBlock:(void (^)(RKObjectMapping *))block DEPRECATED_ATTRIBUTE;
