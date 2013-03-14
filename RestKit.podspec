@@ -21,3 +21,5 @@ Pod::Spec.new do |s|
 #import <CoreData/CoreData.h>
 #endif /* __OBJC__*/
 EOS
+
+end
