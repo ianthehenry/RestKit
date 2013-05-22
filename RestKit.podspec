@@ -11,10 +11,11 @@ Pod::Spec.new do |s|
 
   ### Preferred dependencies
 
-  s.preferred_dependency = 'JSON'
+  s.default_subspec = 'JSON'
 
   s.subspec 'JSON' do |js|
     js.dependency 'RestKit/Network'
+    js.dependency 'RestKit/ObjectMapping'
     js.dependency 'RestKit/ObjectMapping/JSON'
     js.dependency 'RestKit/ObjectMapping/CoreData'
     js.dependency 'RestKit/UI'
@@ -22,6 +23,7 @@ Pod::Spec.new do |s|
 
   s.subspec 'XML' do |xs|
     xs.dependency 'RestKit/Network'
+    xs.dependency 'RestKit/ObjectMapping'
     xs.dependency 'RestKit/ObjectMapping/XML'
     xs.dependency 'RestKit/ObjectMapping/CoreData'
     xs.dependency 'RestKit/UI'
