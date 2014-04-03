@@ -37,7 +37,7 @@ Pod::Spec.new do |s|
     ns.osx.frameworks = 'CoreServices', 'Security', 'SystemConfiguration'
     ns.dependency       'LibComponentLogging-NSLog', '>= 1.0.4'
     ns.dependency       'cocoa-oauth'
-    ns.dependency       'FileMD5Hash'
+    ns.dependency       'FileMD5Hash', '= 1.0.0'
     ns.dependency       'SOCKit'
   end
 
